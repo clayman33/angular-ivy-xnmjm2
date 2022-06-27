@@ -21,7 +21,8 @@ export class AppComponent  implements OnInit{
           throw new Error('This is the fourth item');
         }
         return item;
-      })      
+      }),  
+      take(3)    
     ).subscribe({
       next: (item) => console.log(`string emitted ${item}`),
       error: (err) => console.log(err),
